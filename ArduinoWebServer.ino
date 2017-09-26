@@ -25,8 +25,8 @@ int autoControl = 0;
 boolean flag = true; //Bandera marca inicio y fin de señal de una gota
 
 /*PINS INDICADORES*/
-int pinError = 8;
-int pinSuccess = 6;
+int pinError = 6;
+int pinSuccess = 8;
 bool isErrorOn = false;
 bool isSuccessOn = false;
 
@@ -159,7 +159,7 @@ void loop() {
   }
 
   //Enviando al receptor XBEE para girar el motor de la valvula
-//  sendStartOrEnd(true);
+  sendStartOrEnd(true);
   sendIntByBytes(GPM);
   sendIntByBytes(GPMM);
   sendIntByBytes(servoDegrees);
